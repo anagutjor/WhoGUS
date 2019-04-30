@@ -14,15 +14,17 @@ import sys, logging, time, csv, configparser, os
 # import markdown as markdown
 import traceback
 
-import markup
+#import markup
+from markup import *
 from datetime import timedelta, datetime
 
-from pip._vendor.cachecontrol.caches.file_cache import _secure_open_write
+#from pip._vendor.cachecontrol.caches.file_cache import _secure_open_write
+import requests
 
 logging.getLogger("scapy.runtime").setLevel(logging.ERROR)
 from scapy.all import *
 
-config_route = "myConfig.cfg"
+config_route = "config.cfg" #"myConfig.cfg"
 
 #Vuelca en una variable ConfigFile el contenido del archivo de config.
 def read_config_file():
